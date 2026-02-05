@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
+import { GlobeAltIcon } from '@heroicons/react/24/outline';
 
 export default function FeaturedImports() {
   const featured = [
@@ -14,7 +15,6 @@ export default function FeaturedImports() {
       price: 'Contact for Price',
       image: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?q=80&w=800',
       status: 'Available',
-      flag: '🇯🇵',
     },
     {
       id: 2,
@@ -24,7 +24,6 @@ export default function FeaturedImports() {
       price: 'Contact for Price',
       image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=800',
       status: 'Incoming',
-      flag: '🇯🇵',
     },
     {
       id: 3,
@@ -34,7 +33,6 @@ export default function FeaturedImports() {
       price: 'Contact for Price',
       image: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?q=80&w=800',
       status: 'Available',
-      flag: '🇺🇸',
     },
     {
       id: 4,
@@ -44,7 +42,6 @@ export default function FeaturedImports() {
       price: 'Contact for Price',
       image: 'https://images.unsplash.com/photo-1581094271901-8022df4466f9?q=80&w=800',
       status: 'Available',
-      flag: '🇺🇸',
     },
   ];
 
@@ -89,9 +86,10 @@ export default function FeaturedImports() {
                 }`}>
                   {item.status}
                 </div>
-                {/* Origin Flag */}
-                <div className="absolute top-4 left-4 text-2xl">
-                  {item.flag}
+                {/* Origin */}
+                <div className="absolute top-4 left-4 flex items-center space-x-2 bg-gt-black/80 px-3 py-1 rounded-lg">
+                  <GlobeAltIcon className="w-4 h-4 text-gt-red" />
+                  <span className="text-xs font-semibold text-white">{item.origin}</span>
                 </div>
               </div>
 

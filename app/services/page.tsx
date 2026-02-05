@@ -1,12 +1,22 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
+import { TruckIcon, WrenchScrewdriverIcon, ArrowUpTrayIcon, DocumentTextIcon, ShoppingBagIcon, MagnifyingGlassIcon, QueueListIcon } from '@heroicons/react/24/outline';
 
 export default function ServicesPage() {
+  const iconComponents = {
+    'Vehicle Sourcing': TruckIcon,
+    'Heavy Equipment Imports': WrenchScrewdriverIcon,
+    'Shipping & Logistics': ArrowUpTrayIcon,
+    'Customs Clearance Support': DocumentTextIcon,
+    'Wholesale & Bulk Imports': ShoppingBagIcon,
+    'Inspection Services': MagnifyingGlassIcon,
+    'Business Fleet Sourcing': QueueListIcon,
+  };
+
   const services = [
     {
       title: 'Vehicle Sourcing',
-      icon: '🚗',
       description: 'Expert sourcing of vehicles from Japan, USA, UK, and Canada. We find the perfect match for your needs and budget.',
       features: [
         'Access to major auctions and dealerships',
@@ -17,7 +27,6 @@ export default function ServicesPage() {
     },
     {
       title: 'Heavy Equipment Imports',
-      icon: '🏗️',
       description: 'Specialized in importing construction and agricultural machinery for businesses.',
       features: [
         'Farm machinery and tractors',
@@ -28,7 +37,6 @@ export default function ServicesPage() {
     },
     {
       title: 'Shipping & Logistics',
-      icon: '🚢',
       description: 'Complete shipping coordination from source country to Jamaica.',
       features: [
         'Container and RoRo shipping',
@@ -39,7 +47,6 @@ export default function ServicesPage() {
     },
     {
       title: 'Customs Clearance Support',
-      icon: '📋',
       description: 'Guidance through customs and import documentation processes.',
       features: [
         'Import permit assistance',
@@ -50,7 +57,6 @@ export default function ServicesPage() {
     },
     {
       title: 'Wholesale & Bulk Imports',
-      icon: '📦',
       description: 'Bulk import distribution of wholesale items, beverages, snacks, and consumer goods. Perfect for retailers and resellers.',
       features: [
         'Arizona beverages and energy drinks',
@@ -61,7 +67,6 @@ export default function ServicesPage() {
     },
     {
       title: 'Inspection Services',
-      icon: '🔍',
       description: 'Thorough inspections before purchase to ensure quality and condition.',
       features: [
         'Mechanical inspections',
@@ -72,7 +77,6 @@ export default function ServicesPage() {
     },
     {
       title: 'Business Fleet Sourcing',
-      icon: '🚛',
       description: 'Special packages for businesses requiring multiple vehicles or equipment.',
       features: [
         'Volume discounts',
@@ -102,11 +106,13 @@ export default function ServicesPage() {
       {/* Services Grid */}
       <section className="section-container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {services.map((service, index) => (
+          {services.map((service, index) => {
+            const IconComponent = iconComponents[service.title as keyof typeof iconComponents];
+            return (
             <div key={index} className="card p-8">
               <div className="flex items-start space-x-6">
-                <div className="text-6xl flex-shrink-0">
-                  {service.icon}
+                <div className="flex-shrink-0">
+                  <IconComponent className="w-16 h-16 text-gt-red" />
                 </div>
                 <div className="flex-1">
                   <h2 className="text-2xl font-montserrat font-bold mb-3">
@@ -128,7 +134,8 @@ export default function ServicesPage() {
                 </div>
               </div>
             </div>
-          ))}
+            );
+          })}
         </div>
       </section>
 
