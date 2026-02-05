@@ -12,7 +12,7 @@ export default function FeaturedImports() {
       origin: 'Japan',
       category: 'Pickup',
       price: 'Contact for Price',
-      image: '/imports/hilux.jpg',
+      image: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?q=80&w=800',
       status: 'Available',
       flag: '🇯🇵',
     },
@@ -22,7 +22,7 @@ export default function FeaturedImports() {
       origin: 'Japan',
       category: 'Bus',
       price: 'Contact for Price',
-      image: '/imports/bus.jpg',
+      image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=800',
       status: 'Incoming',
       flag: '🇯🇵',
     },
@@ -32,7 +32,7 @@ export default function FeaturedImports() {
       origin: 'USA',
       category: 'Pickup',
       price: 'Contact for Price',
-      image: '/imports/f150.jpg',
+      image: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?q=80&w=800',
       status: 'Available',
       flag: '🇺🇸',
     },
@@ -42,7 +42,7 @@ export default function FeaturedImports() {
       origin: 'USA',
       category: 'Machinery',
       price: 'Contact for Price',
-      image: '/imports/excavator.jpg',
+      image: 'https://images.unsplash.com/photo-1581094271901-8022df4466f9?q=80&w=800',
       status: 'Available',
       flag: '🇺🇸',
     },
@@ -74,11 +74,13 @@ export default function FeaturedImports() {
             transition={{ delay: index * 0.1 }}
           >
             <div className="card group overflow-hidden">
-              {/* Image Placeholder */}
+              {/* Image */}
               <div className="relative h-48 bg-gray-800 overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center text-6xl">
-                  {item.category === 'Pickup' ? '🚙' : item.category === 'Bus' ? '🚌' : '🚜'}
-                </div>
+                <img 
+                  src={item.image} 
+                  alt={item.name}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
                 {/* Status Badge */}
                 <div className={`absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-semibold ${
                   item.status === 'Available' 

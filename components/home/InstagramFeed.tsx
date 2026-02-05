@@ -18,37 +18,37 @@ export default function InstagramFeed() {
   const placeholderPosts = [
     {
       id: '1',
-      emoji: '🚙',
+      image: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?q=80&w=600',
       caption: 'New Toyota Hilux just arrived!',
       likes: 245,
     },
     {
       id: '2',
-      emoji: '🚌',
+      image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=600',
       caption: 'Premium coach buses ready for delivery',
       likes: 189,
     },
     {
       id: '3',
-      emoji: '🚜',
+      image: 'https://images.unsplash.com/photo-1581094271901-8022df4466f9?q=80&w=600',
       caption: 'Heavy machinery sourced from USA',
       likes: 312,
     },
     {
       id: '4',
-      emoji: '🚐',
+      image: 'https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?q=80&w=600',
       caption: 'Coaster buses in stock',
       likes: 276,
     },
     {
       id: '5',
-      emoji: '📦',
+      image: 'https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?q=80&w=600',
       caption: 'Container shipment incoming',
       likes: 198,
     },
     {
       id: '6',
-      emoji: '⚡',
+      image: 'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=600',
       caption: 'Industrial generators available',
       likes: 234,
     },
@@ -94,10 +94,12 @@ export default function InstagramFeed() {
             transition={{ delay: index * 0.1 }}
             className="group relative aspect-square bg-gray-800 rounded-lg overflow-hidden cursor-pointer"
           >
-            {/* Placeholder Image with Emoji */}
-            <div className="absolute inset-0 flex items-center justify-center text-6xl">
-              {post.emoji}
-            </div>
+            {/* Image */}
+            <img 
+              src={post.image} 
+              alt={post.caption}
+              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+            />
 
             {/* Hover Overlay */}
             <div className="absolute inset-0 bg-gt-red/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">

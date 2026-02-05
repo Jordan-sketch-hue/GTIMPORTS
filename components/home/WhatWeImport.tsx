@@ -13,48 +13,56 @@ export default function WhatWeImport() {
     {
       name: 'Pickups',
       icon: '🚙',
+      bgImage: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?q=80&w=400',
       description: 'Durable trucks and pickups from top manufacturers',
       slug: 'pickups',
     },
     {
       name: 'Coach Buses',
       icon: '🚌',
+      bgImage: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=400',
       description: 'Premium passenger buses for commercial use',
       slug: 'coach-buses',
     },
     {
       name: 'Reefer Boxes',
       icon: '🧊',
+      bgImage: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=400',
       description: 'Refrigerated containers and cooling systems',
       slug: 'reefer-boxes',
     },
     {
       name: 'Farm Machinery',
       icon: '🚜',
+      bgImage: 'https://images.unsplash.com/photo-1581094271901-8022df4466f9?q=80&w=400',
       description: 'Agricultural equipment and heavy machinery',
       slug: 'farm-machinery',
     },
     {
       name: 'Containers',
       icon: '📦',
+      bgImage: 'https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?q=80&w=400',
       description: 'Shipping containers for storage and transport',
       slug: 'containers',
     },
     {
       name: 'Generators',
       icon: '⚡',
+      bgImage: 'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=400',
       description: 'Industrial and residential power generators',
       slug: 'generators',
     },
     {
       name: 'Coasters',
       icon: '🚐',
+      bgImage: 'https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?q=80&w=400',
       description: 'Compact buses and passenger vehicles',
       slug: 'coasters',
     },
     {
       name: 'More',
       icon: '➕',
+      bgImage: 'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=400',
       description: 'Custom import requests and special orders',
       slug: 'contact',
     },
@@ -86,16 +94,28 @@ export default function WhatWeImport() {
             transition={{ delay: index * 0.1 }}
           >
             <Link href={`/imports/${category.slug}`}>
-              <div className="card group cursor-pointer p-8 h-full">
-                <div className="text-6xl mb-4 transition-transform group-hover:scale-110">
-                  {category.icon}
+              <div className="relative overflow-hidden rounded-xl h-[240px] group cursor-pointer">
+                {/* Background Image */}
+                <div 
+                  className="absolute inset-0 bg-cover bg-center opacity-40 group-hover:opacity-60 group-hover:scale-110 transition-all duration-500"
+                  style={{ backgroundImage: `url('${category.bgImage}')` }}
+                />
+                
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-gt-black via-gt-black/80 to-transparent" />
+                
+                {/* Content */}
+                <div className="relative h-full p-6 flex flex-col justify-end">
+                  <h3 className="text-2xl font-montserrat font-bold mb-2 group-hover:text-gt-red transition-colors">
+                    {category.name}
+                  </h3>
+                  <p className="text-gt-steel text-sm">
+                    {category.description}
+                  </p>
                 </div>
-                <h3 className="text-xl font-montserrat font-semibold mb-3 group-hover:text-gt-red transition-colors">
-                  {category.name}
-                </h3>
-                <p className="text-gt-steel text-sm">
-                  {category.description}
-                </p>
+                
+                {/* Red Border on Hover */}
+                <div className="absolute inset-0 border-2 border-gt-red opacity-0 group-hover:opacity-100 transition-opacity rounded-xl pointer-events-none" />
               </div>
             </Link>
           </motion.div>
