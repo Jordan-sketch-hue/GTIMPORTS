@@ -2,6 +2,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Chatbot from '@/components/Chatbot';
 import WhatsAppButton from '@/components/WhatsAppButton';
+import { CheckBadgeIcon, ShieldCheckIcon, BoltIcon } from '@heroicons/react/24/outline';
 
 export default function AboutPage() {
   return (
@@ -61,21 +62,21 @@ export default function AboutPage() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="card p-8 text-center">
-            <div className="text-5xl mb-4">🎯</div>
+            <CheckBadgeIcon className="w-16 h-16 mx-auto mb-4 text-gt-red" />
             <h3 className="text-xl font-montserrat font-bold mb-3">Transparency</h3>
             <p className="text-gt-steel">
               Clear pricing, detailed reports, and honest communication throughout the import process
             </p>
           </div>
           <div className="card p-8 text-center">
-            <div className="text-5xl mb-4">🤝</div>
+            <ShieldCheckIcon className="w-16 h-16 mx-auto mb-4 text-gt-red" />
             <h3 className="text-xl font-montserrat font-bold mb-3">Trust</h3>
             <p className="text-gt-steel">
               Building long-term relationships with our clients through reliability and integrity
             </p>
           </div>
           <div className="card p-8 text-center">
-            <div className="text-5xl mb-4">⚡</div>
+            <BoltIcon className="w-16 h-16 mx-auto mb-4 text-gt-red" />
             <h3 className="text-xl font-montserrat font-bold mb-3">Excellence</h3>
             <p className="text-gt-steel">
               Delivering premium quality vehicles and exceptional customer service every time
