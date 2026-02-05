@@ -84,24 +84,26 @@ export default function Navbar() {
             exit={{ opacity: 0, height: 0 }}
             className="md:hidden bg-gt-black/98 backdrop-blur-lg"
           >
-            <div className="px-4 pt-2 pb-6 space-y-3">
+            <div className="px-4 pt-4 pb-8 space-y-2">
               {navLinks.map((link) => (
                 <Link
                   key={link.name}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className="block px-4 py-3 text-white hover:bg-gt-red/20 rounded-lg transition-colors"
+                  className="block px-4 py-3 text-white text-base hover:bg-gt-red/20 rounded-lg transition-colors font-medium"
                 >
                   {link.name}
                 </Link>
               ))}
-              <Link
-                href="/contact"
-                onClick={() => setIsOpen(false)}
-                className="block btn-primary text-center"
-              >
-                Get a Quote
-              </Link>
+              <div className="pt-4 border-t border-gt-steel/20">
+                <Link
+                  href="/contact"
+                  onClick={() => setIsOpen(false)}
+                  className="block bg-gt-red text-white text-center py-3 rounded-lg font-montserrat font-semibold hover:bg-red-700 transition-all"
+                >
+                  Get a Quote
+                </Link>
+              </div>
             </div>
           </motion.div>
         )}

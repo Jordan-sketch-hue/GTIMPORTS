@@ -26,45 +26,45 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
         >
           {/* Main Heading */}
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-montserrat font-bold mb-6">
-            <span className="text-white">Quality Imports.</span>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-montserrat font-bold mb-4 sm:mb-6 leading-tight">
+            <span className="text-white">Import Quality.</span>
             <br />
-            <span className="text-white">Global Access.</span>
+            <span className="text-white">Source Globally.</span>
             <br />
-            <span className="text-gradient">Trusted Delivery.</span>
+            <span className="text-gradient">Deliver Reliably.</span>
           </h1>
 
           {/* Subheading */}
-          <p className="text-xl md:text-2xl text-gt-ash max-w-3xl mx-auto mb-12 leading-relaxed">
-            We source vehicles, machinery, and equipment from Japan, USA, UK, and Canada — handled end to end.
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gt-ash max-w-3xl mx-auto mb-8 sm:mb-12 leading-relaxed px-4">
+            Premium vehicles, machinery & equipment from trusted sources — Japan, USA, UK, Canada. Complete handling from selection to delivery.
           </p>
 
-          {/* Country Flags */}
-          <div className="flex justify-center items-center space-x-6 mb-12">
-            <div className="text-center">
-              <div className="text-4xl mb-2">🇯🇵</div>
-              <span className="text-gt-steel text-sm">Japan</span>
+          {/* Source Countries */}
+          <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-6 mb-8 sm:mb-12 px-4">
+            <div className="bg-gt-red/10 border border-gt-red/30 rounded-lg px-3 sm:px-4 py-2 text-sm sm:text-base">
+              <p className="font-semibold text-white">Japan</p>
+              <p className="text-xs sm:text-sm text-gt-steel">Pickups, Buses</p>
             </div>
-            <div className="text-center">
-              <div className="text-4xl mb-2">🇺🇸</div>
-              <span className="text-gt-steel text-sm">USA</span>
+            <div className="bg-gt-red/10 border border-gt-red/30 rounded-lg px-3 sm:px-4 py-2 text-sm sm:text-base">
+              <p className="font-semibold text-white">USA</p>
+              <p className="text-xs sm:text-sm text-gt-steel">Trucks, Equipment</p>
             </div>
-            <div className="text-center">
-              <div className="text-4xl mb-2">🇬🇧</div>
-              <span className="text-gt-steel text-sm">UK</span>
+            <div className="bg-gt-red/10 border border-gt-red/30 rounded-lg px-3 sm:px-4 py-2 text-sm sm:text-base">
+              <p className="font-semibold text-white">UK</p>
+              <p className="text-xs sm:text-sm text-gt-steel">Specialty</p>
             </div>
-            <div className="text-center">
-              <div className="text-4xl mb-2">🇨🇦</div>
-              <span className="text-gt-steel text-sm">Canada</span>
+            <div className="bg-gt-red/10 border border-gt-red/30 rounded-lg px-3 sm:px-4 py-2 text-sm sm:text-base">
+              <p className="font-semibold text-white">Canada</p>
+              <p className="text-xs sm:text-sm text-gt-steel">Machinery</p>
             </div>
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-            <Link href="/contact" className="btn-primary text-lg px-8 py-4">
-              Request a Quote
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 px-4 sm:px-0">
+            <Link href="/contact" className="btn-primary text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto text-center">
+              Request Quote
             </Link>
-            <Link href="/imports" className="btn-secondary text-lg px-8 py-4">
+            <Link href="/imports" className="btn-secondary text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto text-center">
               Browse Imports
             </Link>
           </div>

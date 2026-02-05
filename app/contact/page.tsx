@@ -17,26 +17,26 @@ export default function ContactPage() {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-b from-gt-black to-gray-900">
-        <div className="section-container">
-          <h1 className="text-5xl md:text-6xl font-montserrat font-bold mb-6 text-center">
+      <section className="pt-24 sm:pt-32 pb-12 sm:pb-16 bg-gradient-to-b from-gt-black to-gray-900">
+        <div className="section-container px-4 sm:px-6">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-montserrat font-bold mb-4 sm:mb-6 text-center">
             Get in <span className="text-gradient">Touch</span>
           </h1>
-          <p className="text-xl text-gt-steel max-w-3xl mx-auto text-center">
-            Ready to start your import journey? Contact us today for a free consultation and quote
+          <p className="text-base sm:text-lg md:text-xl text-gt-steel max-w-3xl mx-auto text-center">
+            Let's discuss your import needs. Free consultation, transparent pricing, expert guidance.
           </p>
         </div>
       </section>
 
-      <section className="section-container">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <section className="section-container px-4 sm:px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Contact Form */}
           <div>
-            <h2 className="text-3xl font-montserrat font-bold mb-6">
+            <h2 className="text-3xl sm:text-4xl font-montserrat font-bold mb-6">
               Request a Quote
             </h2>
-            <p className="text-gt-steel mb-8">
-              Fill out the form below and we'll get back to you within 24 hours with a detailed quote.
+            <p className="text-gt-steel mb-8 text-base sm:text-lg">
+              Share your requirements and budget. We respond within 24 hours with detailed pricing and options.
             </p>
             <ContactForm />
           </div>

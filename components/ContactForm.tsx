@@ -138,10 +138,10 @@ export default function ContactForm() {
               className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:border-gt-red transition-colors"
             >
               <option value="">Any Country</option>
-              <option value="japan">🇯🇵 Japan</option>
-              <option value="usa">🇺🇸 USA</option>
-              <option value="uk">🇬🇧 UK</option>
-              <option value="canada">🇨🇦 Canada</option>
+              <option value="japan">Japan</option>
+              <option value="usa">USA</option>
+              <option value="uk">UK</option>
+              <option value="canada">Canada</option>
             </select>
           </div>
           <div>
@@ -187,13 +187,13 @@ export default function ContactForm() {
           disabled={isSubmitting}
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
-          className="w-full btn-primary text-lg py-4 disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full bg-gt-red text-white font-montserrat font-semibold py-3 sm:py-4 rounded-lg hover:bg-red-700 transition-all text-base sm:text-lg disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          {isSubmitting ? 'Sending...' : 'Get a Free Quote'}
+          {isSubmitting ? 'Sending...' : 'Request Free Quote'}
         </motion.button>
 
-        <p className="text-xs text-gt-steel text-center">
-          By submitting this form, you agree to our terms and privacy policy.
+        <p className="text-xs sm:text-sm text-gt-steel text-center">
+          Quick response within 24 hours • WhatsApp available
         </p>
       </form>
     </>
