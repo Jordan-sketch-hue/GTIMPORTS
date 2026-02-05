@@ -1,15 +1,11 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --font-montserrat: 'Montserrat', sans-serif;
   --font-inter: 'Inter', sans-serif;
   --font-oswald: 'Oswald', sans-serif;
-}
-
-@theme inline {
-  --font-sans: var(--font-inter);
-  --font-heading: var(--font-montserrat);
-  --font-accent: var(--font-oswald);
 }
 
 html {
