@@ -49,6 +49,17 @@ export default function ServicesPage() {
       ],
     },
     {
+      title: 'Wholesale & Bulk Imports',
+      icon: '📦',
+      description: 'Bulk import distribution of wholesale items, beverages, snacks, and consumer goods. Perfect for retailers and resellers.',
+      features: [
+        'Arizona beverages and energy drinks',
+        'Snacks and confectionery items',
+        'Consumer packaged goods',
+        'Pre-assembled import kits',
+      ],
+    },
+    {
       title: 'Inspection Services',
       icon: '🔍',
       description: 'Thorough inspections before purchase to ensure quality and condition.',
