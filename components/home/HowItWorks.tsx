@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { MagnifyingGlassIcon, CheckCircleIcon, TruckIcon, CheckBadgeIcon } from '@heroicons/react/24/outline';
 
 export default function HowItWorks() {
   const steps = [
@@ -8,25 +9,25 @@ export default function HowItWorks() {
       number: '01',
       title: 'Request Vehicle',
       description: 'Tell us what you need. We source from Japan, USA, UK, or Canada based on your preferences.',
-      icon: '🔍',
+      icon: MagnifyingGlassIcon,
     },
     {
       number: '02',
       title: 'Sourcing & Inspection',
       description: 'We locate your vehicle, conduct thorough inspections, and provide detailed reports with photos.',
-      icon: '✅',
+      icon: CheckCircleIcon,
     },
     {
       number: '03',
       title: 'Shipping & Customs',
       description: 'Handle all logistics, shipping arrangements, and customs clearance documentation for you.',
-      icon: '🚢',
+      icon: TruckIcon,
     },
     {
       number: '04',
       title: 'Delivery in Jamaica',
       description: 'Your import arrives safely at your location. We ensure smooth end-to-end delivery.',
-      icon: '🎉',
+      icon: CheckBadgeIcon,
     },
   ];
 
@@ -67,8 +68,8 @@ export default function HowItWorks() {
                 </div>
 
                 {/* Icon */}
-                <div className="text-5xl mb-4">
-                  {step.icon}
+                <div className="mb-4">
+                  <step.icon className="w-14 h-14 text-gt-red" />
                 </div>
 
                 {/* Title */}
